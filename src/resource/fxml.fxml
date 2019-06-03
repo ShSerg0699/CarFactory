@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="734.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="factory.Controller">
+   <children>
+      <ImageView fitHeight="100.0" fitWidth="170.0" layoutX="35.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@1484767715_mazda-2.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="100.0" fitWidth="161.0" layoutX="190.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@nesushhii-kuzov.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="100.0" fitWidth="180.0" layoutX="354.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@arch-auto-parts-composite-homepage.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="86.0" layoutY="127.0" text="Engine" />
+      <Label layoutX="245.0" layoutY="127.0" text="Carcass" />
+      <Label layoutX="399.0" layoutY="127.0" text="Accessory" />
+      <ImageView fitHeight="155.0" fitWidth="346.0" layoutX="35.0" layoutY="200.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@1967_ford_mustang_390_gta_by_drogobroadband.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="167.0" layoutY="350.0" text="Car" />
+      <Label fx:id="engineLabel" layoutX="99.0" layoutY="148.0" text="0/0" />
+      <Label fx:id="carcassLabel" layoutX="259.0" layoutY="148.0" text="0/0" />
+      <Label fx:id="accessoryLabel" layoutX="421.0" layoutY="148.0" text="0/0" />
+      <Label fx:id="carLabel" layoutX="167.0" layoutY="371.0" text="0/0" />
+      <Button fx:id="startButton" layoutX="580.0" layoutY="30.0" mnemonicParsing="false" text="START" />
+      <Button fx:id="stopButton" layoutX="584.0" layoutY="75.0" mnemonicParsing="false" text="STOP" />
+   </children>
+</AnchorPane>
