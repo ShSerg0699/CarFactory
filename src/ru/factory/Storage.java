@@ -1,9 +1,10 @@
 package factory;
 
 import java.util.LinkedList;
+import java.util.Observable;
 
 
-public class Storage<T> {
+public class Storage<T>  extends Observable {
     private int maxSize;
     private LinkedList<T> storage = new LinkedList<>();
 

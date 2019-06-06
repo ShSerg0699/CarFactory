@@ -10,7 +10,7 @@ import org.apache.logging.log4j.Logger;
 
 public class Main extends Application {
 
-    private static final Logger log = LogManager.getRootLogger();
+    private static final Logger log = LogManager.getLogger();
 
     @Override
     public void start(Stage primaryStage) throws Exception{

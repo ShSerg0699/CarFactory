@@ -2,11 +2,12 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="400.0" prefWidth="734.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="factory.Controller">
+<AnchorPane prefHeight="500.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="factory.Controller">
    <children>
       <ImageView fitHeight="100.0" fitWidth="170.0" layoutX="35.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -38,5 +39,11 @@
       <Label fx:id="carLabel" layoutX="167.0" layoutY="371.0" text="0/0" />
       <Button fx:id="startButton" layoutX="580.0" layoutY="30.0" mnemonicParsing="false" text="START" />
       <Button fx:id="stopButton" layoutX="584.0" layoutY="75.0" mnemonicParsing="false" text="STOP" />
+      <TextField fx:id="engineTextField" layoutX="399.0" layoutY="250.0" prefHeight="31.0" prefWidth="263.0" promptText="Enter Engine speed" />
+      <TextField fx:id="carcassTextField" layoutX="399.0" layoutY="293.0" prefHeight="31.0" prefWidth="263.0" promptText="Enter Carcass speed" />
+      <TextField fx:id="accessoryTextField" layoutX="399.0" layoutY="335.0" prefHeight="31.0" prefWidth="263.0" promptText="Enter Accessory speed" />
+      <TextField fx:id="workerTextField" layoutX="399.0" layoutY="377.0" prefHeight="31.0" prefWidth="263.0" promptText="Enter Worker speed" />
+      <TextField fx:id="dealerTextField" layoutX="399.0" layoutY="420.0" prefHeight="31.0" prefWidth="263.0" promptText="Enter Dealer speed" />
+      <Label layoutX="396.0" layoutY="200.0" prefHeight="31.0" prefWidth="263.0" text="Enter data before START" />
    </children>
 </AnchorPane>

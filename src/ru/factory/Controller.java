@@ -4,6 +4,7 @@ import javafx.animation.AnimationTimer;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 
 public class Controller {
     private CarFactory carFactory;
@@ -26,10 +27,43 @@ public class Controller {
     private Label carLabel;
 
     @FXML
+    private TextField engineTextField;
+
+    @FXML
+    private TextField carcassTextField;
+
+    @FXML
+    private TextField accessoryTextField;
+
+    @FXML
+    private TextField workerTextField;
+
+    @FXML
+    private TextField dealerTextField;
+
+    @FXML
     private void initialize(){
         startButton.setOnAction(event -> {
-            carFactory.run();
+            if(engineTextField.getText().isEmpty() ||
+                    carcassTextField.getText().isEmpty() ||
+                    accessoryTextField.getText().isEmpty() ||
+                    workerTextField.getText().isEmpty() ||
+                    dealerTextField.getText().isEmpty()){
+                System.out.println("Enter all data");
+                return;
+            }
+
             System.out.println("run");
+            try {
+                carFactory.run(Integer.valueOf(engineTextField.getText()),
+                        Integer.valueOf(carcassTextField.getText()),
+                        Integer.valueOf(accessoryTextField.getText()),
+                        Integer.valueOf(workerTextField.getText()),
+                        Integer.valueOf(dealerTextField.getText()));
+            }catch (NumberFormatException e){
+                System.out.println("Incorrect data");
+                return;
+            }
             AnimationTimer timer = new AnimationTimer() {
                 @Override
                 public void handle(long now) {
@@ -39,8 +73,8 @@ public class Controller {
             timer.start();
         });
         stopButton.setOnAction(event -> {
-            carFactory.stop();
             System.out.println("stop");
+            carFactory.stop();
         });
 
     }

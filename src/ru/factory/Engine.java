@@ -1,11 +1,14 @@
 package factory;
 
+import java.util.concurrent.atomic.AtomicInteger;
+
 public class Engine {
-    private static int forID = 10000;
-    private int id;
+    private static AtomicInteger forID = new AtomicInteger(10000);
+    private final int id;
 
     public Engine(){
-        forID++;
-        id = forID;
+        id = forID.incrementAndGet();
     }
+
+    public int getID() { return id; }
 }

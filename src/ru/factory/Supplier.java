@@ -15,8 +15,8 @@ public class Supplier<T> extends Thread{
     public void run() {
         while (!Thread.currentThread().isInterrupted()) {
             try {
-                storage.add(carPartCreator.createCarPart());
                 Thread.sleep(speed * 1000);
+                storage.add(carPartCreator.createCarPart());
             } catch (InterruptedException e) {
                 System.out.println("interrupted");
                 return;
